@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background track -->
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/beige_dark" />
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+    <!-- Progress fill with soft UI effect -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <layer-list>
+                <item>
+                    <shape android:shape="rectangle">
+                        <solid android:color="@color/pastel_green_dark" />
+                        <corners android:radius="12dp" />
+                    </shape>
+                </item>
+                <!-- Light highlight on progress -->
+                <item
+                    android:top="2dp"
+                    android:left="2dp">
+                    <shape android:shape="rectangle">
+                        <solid android:color="@color/shadow_light" />
+                        <corners android:radius="10dp" />
+                    </shape>
+                </item>
+            </layer-list>
+        </clip>
+    </item>
+</layer-list>
+

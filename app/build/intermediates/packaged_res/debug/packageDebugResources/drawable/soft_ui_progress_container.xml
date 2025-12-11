@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base shape -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/soft_blue" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+    <!-- Soft shadow effect (dark shadow) -->
+    <item
+        android:bottom="2dp"
+        android:right="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/shadow_dark" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+    <!-- Light shadow effect (highlight) -->
+    <item
+        android:top="2dp"
+        android:left="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/shadow_light" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+    <!-- Main content -->
+    <item
+        android:bottom="3dp"
+        android:top="3dp"
+        android:left="3dp"
+        android:right="3dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/soft_blue" />
+            <corners android:radius="14dp" />
+        </shape>
+    </item>
+</layer-list>
+

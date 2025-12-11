@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Object Detection</string>
+    <string name="app_title">EcoSense Object Watcher</string>
+    <string name="initializing">Инициализация...</string>
+    <string name="objects_around">Объектов вокруг:</string>
+    <string name="no_objects_detected">Объекты не обнаружены</string>
+    <string name="camera_permission_required">Camera permission is required for object detection</string>
+    <string name="permission_denied">Permission denied</string>
+</resources>
+
+
+
+
+

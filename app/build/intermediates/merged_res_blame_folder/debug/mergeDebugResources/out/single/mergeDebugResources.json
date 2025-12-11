@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "com.compvision.app-debug-36:/layout_activity_main.xml.flat",
+        "source": "com.compvision.app-main-38:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.compvision.app-debug-36:/drawable_soft_ui_statistics_cloud.xml.flat",
+        "source": "com.compvision.app-main-38:/drawable/soft_ui_statistics_cloud.xml"
+    },
+    {
+        "merged": "com.compvision.app-debug-36:/drawable_soft_ui_panel.xml.flat",
+        "source": "com.compvision.app-main-38:/drawable/soft_ui_panel.xml"
+    },
+    {
+        "merged": "com.compvision.app-debug-36:/drawable_soft_ui_camera_frame.xml.flat",
+        "source": "com.compvision.app-main-38:/drawable/soft_ui_camera_frame.xml"
+    },
+    {
+        "merged": "com.compvision.app-debug-36:/drawable_soft_ui_progress_container.xml.flat",
+        "source": "com.compvision.app-main-38:/drawable/soft_ui_progress_container.xml"
+    },
+    {
+        "merged": "com.compvision.app-debug-36:/drawable_soft_ui_title_panel.xml.flat",
+        "source": "com.compvision.app-main-38:/drawable/soft_ui_title_panel.xml"
+    },
+    {
+        "merged": "com.compvision.app-debug-36:/drawable_soft_ui_progress_bar.xml.flat",
+        "source": "com.compvision.app-main-38:/drawable/soft_ui_progress_bar.xml"
+    }
+]

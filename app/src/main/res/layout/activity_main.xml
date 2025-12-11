@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_primary"
+    tools:context=".MainActivity">
+
+    <!-- Soft UI Title Panel -->
+    <LinearLayout
+        android:id="@+id/titlePanel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        style="@style/SoftUITitlePanel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/app_title"
+            style="@style/SoftUITitle" />
+
+    </LinearLayout>
+
+    <!-- Progress Bar Container -->
+    <LinearLayout
+        android:id="@+id/progressContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        style="@style/SoftUIProgressContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titlePanel">
+
+        <TextView
+            android:id="@+id/infoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/initializing"
+            style="@style/SoftUISubtitle" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="12dp"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/soft_ui_progress_bar"
+            android:indeterminate="false" />
+
+    </LinearLayout>
+
+    <!-- Camera Preview Container with Soft UI Frame -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cameraContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        style="@style/SoftUICameraFrame"
+        app:layout_constraintBottom_toTopOf="@id/statisticsCloud"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressContainer">
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/cameraPreview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.compvision.app.ObjectDetectionOverlay
+            android:id="@+id/overlay"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Statistics Cloud -->
+    <LinearLayout
+        android:id="@+id/statisticsCloud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:minWidth="200dp"
+        style="@style/SoftUIStatisticsCloud"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/statisticsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/objects_around"
+            style="@style/SoftUIStatisticLabel" />
+
+        <TextView
+            android:id="@+id/objectCountNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="0"
+            style="@style/SoftUIStatisticNumber" />
+
+        <LinearLayout
+            android:id="@+id/objectClassesContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <!-- Object classes will be added dynamically here -->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Legacy Status Container (hidden by default, kept for compatibility) -->
+    <LinearLayout
+        android:id="@+id/statusContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="#80000000"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/infoTextLegacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Инициализация..."
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progressBarLegacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/white" />
+
+    </LinearLayout>
+
+    <!-- Legacy Object Count Text (hidden by default, kept for compatibility) -->
+    <TextView
+        android:id="@+id/objectCountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="#80000000"
+        android:padding="12dp"
+        android:text="Объекты не обнаружены"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

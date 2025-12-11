@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Soft UI Panel Style -->
+    <style name="SoftUIPanel">
+        <item name="android:background">@drawable/soft_ui_panel</item>
+        <item name="android:padding">20dp</item>
+    </style>
+    
+    <!-- Soft UI Title Panel -->
+    <style name="SoftUITitlePanel">
+        <item name="android:background">@drawable/soft_ui_title_panel</item>
+        <item name="android:padding">24dp</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+    
+    <!-- Soft UI Progress Bar Container -->
+    <style name="SoftUIProgressContainer">
+        <item name="android:background">@drawable/soft_ui_progress_container</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+    
+    <!-- Soft UI Camera Frame -->
+    <style name="SoftUICameraFrame">
+        <item name="android:background">@drawable/soft_ui_camera_frame</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+    
+    <!-- Soft UI Statistics Cloud -->
+    <style name="SoftUIStatisticsCloud">
+        <item name="android:background">@drawable/soft_ui_statistics_cloud</item>
+        <item name="android:padding">24dp</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+    
+    <!-- Text Styles -->
+    <style name="SoftUITitle">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+    
+    <style name="SoftUISubtitle">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+    
+    <style name="SoftUIStatisticNumber">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">48sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+    
+    <style name="SoftUIStatisticLabel">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+    
+    <style name="SoftUIObjectClass">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+</resources>
+

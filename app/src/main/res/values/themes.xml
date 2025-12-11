@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.CompVisionApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/pastel_green</item>
+        <item name="colorPrimaryVariant">@color/pastel_green_dark</item>
+        <item name="colorOnPrimary">@color/text_primary</item>
+        <item name="colorSecondary">@color/soft_blue</item>
+        <item name="colorSecondaryVariant">@color/soft_blue_dark</item>
+        <item name="colorOnSecondary">@color/text_primary</item>
+        <item name="android:statusBarColor">@color/background_primary</item>
+        <item name="android:windowBackground">@color/background_primary</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>
+
+
+
+
+
